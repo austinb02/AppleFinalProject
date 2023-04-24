@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <h1>Shopping Cart</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Color</th>
+          <th>Storage</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- The cart items will be dynamically added here using JavaScript -->
+        <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+      </tbody>
+    </table>
+    
+    <script>
+      // Retrieve cart items from local storage
+      let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+      
+      // Add cart items to the table
+      let tableBody = document.querySelector("tbody");
+      for (let item of cartItems) {
+        let row = tableBody.insertRow(-1);
+        let nameCell = row.insertCell(0);
+        nameCell.textContent = item.name;
+        let colorCell = row.insertCell(1);
+        colorCell.textContent = item.color;
+        let storageCell = row.insertCell(2);
+        storageCell.textContent = item.storage;
+        let priceCell = row.insertCell(3);
+        priceCell.textContent = item.price;
+      }
+    </script>
+  </body>
+</html>

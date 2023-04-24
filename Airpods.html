@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Airpods Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Apple.html">Home</a></li>
+          <li><a href="Mac.html">Mac</a></li>
+          <li><a href="IPad.html">iPad</a></li>
+          <li><a href="IPhone.html">iPhone</a></li>
+          <li><a href="Watch.html">Watch</a></li>
+          <li><a href="Airpods.html">Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Airpods</h1>
+      <h2>Choose your Airpods</h2>
+      
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7KCi3BKYVRh1dglmMHq2yRJ9Ld9coLO11wP_pr9v-xIShXdqKGlF_mslMfeG3zkTxkBU&usqp=CAU">
+        <h3>AirPods Pro</h3>
+        <p class="description">$249</p>
+        <button onclick="addToCart('MacBook Air', document.getElementById('air-size').value + ' inch', document.getElementById('air-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUZYKosExg2WwKSB5fkRj6QrrogwxKBPT6GZ3epkmPMw2W77ay1DGVkTXEYbz_gZMRZgg&usqp=CAU" alt="MacBook Pro">
+        <h3>AirPods Max</h3>
+        <p class="description">$549</p>
+		<p>Color:</p>
+        <select id="Color">
+          <option value="8">Space Black</option>
+          <option value="16">Silver</option>
+		  <option value="16">Gold</option>
+        </select>
+        <button onclick="addToCart('MacBook Pro', document.getElementById('pro-size').value + ' inch', document.getElementById('pro-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <button onclick="location.href='Checkout.html'">Checkout</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

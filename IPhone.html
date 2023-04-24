@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iPhone Product Page</title>
+    <script>
+            function addToCart(item) {
+        // Get the current cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        // Add the new item to the cart
+        cartItems.push(item);
+        
+        // Store the updated cart items in local storage
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Apple.html">Home</a></li>
+          <li><a href="Mac.html">Mac</a></li>
+          <li><a href="IPad.html">iPad</a></li>
+          <li><a href="IPhone.html">iPhone</a></li>
+          <li><a href="Watch.html">Watch</a></li>
+          <li><a href="Airpods.html">Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>iPhone</h1>
+      <h2>Choose your iPhone</h2>
+      
+      <div class="product">
+        <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-2up-starlight-220907_inline.jpg.large.jpg">
+        <h3>iPhone 14</h3>
+        <p class="description">$799</p>
+        <p>Screen Size:</p>
+        <select id="air-size">
+          <option value="11">5.7 inches</option>
+          <option value="13">6.4 inches</option>
+        </select>
+        <p>Color:</p>
+        <select id="Color">
+          <option value="8">Space Black</option>
+          <option value="16">Silver</option>
+		  <option value="16">Gold</option>
+        </select>
+        <button onclick="addToCart('MacBook Air', document.getElementById('air-size').value + ' inch', document.getElementById('air-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg" alt="MacBook Pro">
+        <h3>iPhone 14 Pro</h3>
+        <p class="description">$999</p>
+        <p>Screen Size:</p>
+        <select id="pro-size">
+          <option value="13">5.7 inches</option>
+          <option value="16">6.4 inches</option>
+        </select>
+		<p>Color:</p>
+        <select id="Color">
+          <option value="8">Space Black</option>
+          <option value="16">Silver</option>
+		  <option value="16">Gold</option>
+        </select>
+        <button onclick="addToCart('MacBook Pro', document.getElementById('pro-size').value + ' inch', document.getElementById('pro-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <button onclick="location.href='checkout.html'">Checkout</button>
+    </main>
+
+  </body>
+</html>

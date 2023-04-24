@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Watch Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Apple.html">Home</a></li>
+          <li><a href="Mac.html">Mac</a></li>
+          <li><a href="IPad.html">iPad</a></li>
+          <li><a href="IPhone.html">iPhone</a></li>
+          <li><a href="Watch.html">Watch</a></li>
+          <li><a href="Airpods.html">Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Apple Watch</h1>
+      <h2>Choose your Apple Watch</h2>
+      
+      <div class="product">
+        <img src="https://cdn.shoplightspeed.com/shops/611777/files/48317091/image.jpg">
+        <h3>Apple Watch Series 8</h3>
+        <p class="description">$399</p>
+        <p>Color:</p>
+        <select id="Color">
+          <option value="8">Space Black</option>
+          <option value="16">Silver</option>
+		  <option value="16">Gold</option>
+        </select>
+        <button onclick="addToCart('MacBook Air', document.getElementById('air-size').value + ' inch', document.getElementById('air-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/810JR81LIsL._AC_UF894,1000_QL80_.jpg" alt="MacBook Pro">
+        <h3>Apple Watch Ultra</h3>
+		<p class="description">$799</p>
+        <button onclick="addToCart('Apple-Watch-Ultra', document.getElementById('pro-size').value + ' inch', document.getElementById('pro-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <button onclick="location.href='Checkout.html'">Checkout</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

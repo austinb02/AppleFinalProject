@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mac Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Apple.html">Home</a></li>
+          <li><a href="Mac.html">Mac</a></li>
+          <li><a href="IPad.html">iPad</a></li>
+          <li><a href="IPhone.html">iPhone</a></li>
+          <li><a href="Watch.html">Watch</a></li>
+          <li><a href="Airpods.html">Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Mac</h1>
+      <h2>Choose your Mac</h2>
+      
+      <div class="product">
+        <img src="https://tpc.ucf.edu/wp-content/uploads/sites/5/2020/03/macbook-air-spacegray-gallery2-20220606.png" alt="MacBook Air">
+        <h3>MacBook Air</h3>
+        <p class="description">$999</p>
+        <p>Screen Size:</p>
+        <select id="air-size">
+          <option value="11">11 inches</option>
+          <option value="13">13 inches</option>
+        </select>
+        <p>RAM:</p>
+        <select id="air-ram">
+          <option value="8">8GB</option>
+          <option value="16">16GB</option>
+        </select>
+        <button onclick="addToCart('MacBook Air', document.getElementById('air-size').value + ' inch', document.getElementById('air-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.cs.1worldsync.com/51/e8/51e8fb8a-b95d-40fc-b7e1-6273a686e1e9.jpg" alt="MacBook Pro">
+        <h3>MacBook Pro</h3>
+        <p class="description">$1399</p>
+        <p>Screen Size:</p>
+        <select id="pro-size">
+          <option value="13">13 inches</option>
+          <option value="16">16 inches</option>
+        </select>
+        <p>RAM:</p>
+        <select id="pro-ram">
+          <option value="8">8GB</option>
+          <option value="16">16GB</option>
+          <option value="32">32GB</option>
+        </select>
+        <button onclick="addToCart('MacBook Pro', document.getElementById('pro-size').value + ' inch', document.getElementById('pro-ram').value + ' RAM')">Add to Cart</button>
+      </div>
+
+      <button onclick="location.href='Checkout.html'">Checkout</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

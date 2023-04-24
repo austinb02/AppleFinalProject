@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+    <script>
+      function displayCart() {
+        // Get the current cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        // Display the cart items in the HTML
+        var cartList = document.getElementById("cart-list");
+        for (var i = 0; i < cartItems.length; i++) {
+          var cartItem = document.createElement("li");
+          cartItem.textContent = cartItems[i];
+          cartList.appendChild(cartItem);
+        }
+      }
+    </script>
+  </head>
+  <body onload="displayCart()">
+    <h1>Checkout</h1>
+    <ul id="cart-list"></ul>
+    
+    <h2>Payment Information</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" name="card-number" required><br>
+      
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" name="expiry-date" required><br>
+      
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required><br>
+      
+      <button onclick="location.href='CheckoutSuccessful.html'">Submit Payment</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

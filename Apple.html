@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apple</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      font-weight: normal;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #555;
+      color: white;
+    }
+    td {
+      border-bottom: 1px solid #ddd;
+    }
+    a {
+      color: #007aff;
+      text-decoration: none;
+    }
+    button {
+      border: none;
+      background-color: #007aff;
+      color: white;
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0066c0;
+    }
+
+    /* Header styles */
+    .banner {
+      background-color: #111;
+      color: white;
+      padding: 8px 16px;
+    }
+    .banner ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    .banner li {
+      margin: 0;
+      padding: 0;
+    }
+    .banner a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin-right: 16px;
+    }
+
+    header {
+      background-color: #007aff;
+      color: white;
+      text-align: center;
+      padding: 32px;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    /* Main content styles */
+    main {
+      padding: 32px;
+    }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ddd;
+      margin-bottom: 16px;
+      padding: 16px;
+    }
+    .product img {
+      margin-bottom: 16px;
+    }
+    .product-info {
+      text-align: center;
+    }
+    .product-info h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .product-info p {
+      margin-bottom: 16px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #555;
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <nav>
+      <ul>
+        <li><a href="IPhone.html">iPhone</a></li>
+        <li><a href="Mac.html">MacBook</a></li>
+        <li><a href="Airpods.html">AirPods</a></li>
+        <li><a href="IPad.html">iPad</a></li>
+        <li><a href="Watch.html">Apple Watch</a></li>
+        <li><a href="Login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header>
+    <h1>Apple</h1>
+  </header>
+  <main>
+    <h2>Latest Products</h2>
+    <table>
+      <tr>
+        <td>
+          <div class="product">
+            <img src="https://www.apple.com/v/iphone-14-pro/f/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png" alt="Product 1">
+            <div class="product-info">
+              <h3>iPhone 14 Pro Max</h3>
+              <p>Pro. Beyond.</p>
+              <button onclick="location.href='IPhone.html'">View</button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="product">
+            <img src="https://images.indianexpress.com/2023/01/macbook-pro-2023-india-us-dubai-prices.jpg" alt="Product 2">
+            <div class="product-info">
+              <h3>M2 MacBook Pro</h3>
+              <p>Mover. Maker. Boundary Breaker.</p>
+              <button onclick="location.href='Mac.html'">View</button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="product">
+            <img src="https://images.macrumors.com/t/Cvx7DJzoPozJU3DNgzV8jJQzh84=/1600x0/article-new/2022/09/apple-watch-ultra-2.jpg" alt="Product 3">
+            <div class="product-info">
+              <h3>Apple Watch Ultra</h3>
+              <p>The ultimate tool for a healthy life.</p>
+              <button onclick="location.href='Watch.html'">View</button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="product">
+            <img src="https://www.apple.com/v/ipad-pro/al/images/meta/ipad-pro_overview__glcw458o4byq_og.png" alt="Product 4">
+            <div class="product-info">
+              <h3>iPad Pro</h3>
+              <p>Supercharged with the Apple M1 chip.</p>
+              <button onclick="location.href='IPad.html'">View</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </main>
+  <footer>
+    <p>&copy; 2023 Apple Inc.</p>
+  </footer>
+</body>
+</html>
